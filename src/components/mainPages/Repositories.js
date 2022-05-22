@@ -3,7 +3,7 @@ import Context from './../../context.js';
 
 function Repositories(props){
     // default settings
-    const token = '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';
+    // const token = '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';
     const {userData, setUserData} = useContext(Context);
     const {ifLoad, setIfLoad} = useContext(Context);
 
@@ -36,10 +36,10 @@ function Repositories(props){
 
         fetch(`https://api.github.com/users/${props.username}/repos?per_page=${reposPerPage}&page=${currentPage}`, {
             method: 'GET',
-            headers: {
-                "Content-Type": "application/json",
-                "Authorization": `Bearer ${token}`
-            }
+            // headers: {
+            //     "Content-Type": "application/json",
+            //     "Authorization": `Bearer ${token}`
+            // }
         })
         .then((response) => {
             return response.json();

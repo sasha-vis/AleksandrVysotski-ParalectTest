@@ -10,7 +10,7 @@ import Context from './../context.js';
 function Nav(){
 
     // this token for github
-    const token = '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';
+    // const token = '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';
 
     const {userData, setUserData} = useContext(Context);
     const {ifLoad, setIfLoad} = useContext(Context);
@@ -37,10 +37,10 @@ function Nav(){
         
         fetch(`https://api.github.com/users/${username}`, {
             method: 'GET',
-            headers: {
-                "Content-Type": "application/json",
-                "Authorization": `Bearer ${token}`
-            }
+            // headers: {
+            //     "Content-Type": "application/json",
+            //     "Authorization": `Bearer ${token}`
+            // }
         })
         .then((response) => {
             return response.json();
